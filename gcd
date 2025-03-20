@@ -1,0 +1,7 @@
+<?php
+function gcd($a, $b) 
+{
+return ($b == 0) ? $a : gcd($b, $a % $b);
+}
+echo "GCD of 50 and 20: " . gcd(50, 20);
+?>
