@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Calculator</title>
+</head>
+<body>
+    <h1>Age Calculator</h1>
+    <form method="post">
+        <label>Enter your birthdate:</label>
+        <input type="date" name="birthdate" required>
+        <input type="submit" value="Calculate Age">
+    </form>
+
+    <?php
+if (!empty($_POST['birthdate'])) 
+    echo "<h2>Your age is: " . date_diff(date_create($_POST['birthdate']), date_create())->y . " years</h2>";
+?>
+
+</body>
+</html>
