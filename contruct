@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP Constructor & Destructor</title>
+</head>
+<body>
+    <h2>Constructor & Destructor Example</h2>
+    <?php
+    class Person {
+        function __construct($name) {
+            echo "Hello, $name! Object created.<br>";
+        }
+        function __destruct() {
+            echo "Object destroyed.<br>";
+        }
+    }
+    $person1 = new Person("John");
+    ?>
+</body>
+</html>
