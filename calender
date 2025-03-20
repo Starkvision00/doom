@@ -1,0 +1,29 @@
+<?php
+$year=date("Y");
+$mon=date("m");
+echo"<h1>".date("F",mktime(0,0,0,$mon,1))."$year</h1>";
+echo"<table border='1'>";
+echo
+"<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>";
+$f_day=mktime(0,0,0,$mon,1,$year);
+$f_day_wd=date("w",$f_day);
+$day_in_mon=date("t",$f_day);
+$day = 1;
+for($i=0;$i<6;$i++)
+{
+    echo"<tr>";
+    for($j=0;$j<7;$j++)
+    {
+        $day=($i*7)+$j-$f_day_wd+1;
+        if($day<=0||$day>$day_in_mon)
+        {
+            echo"<td>&nbsp;</td>";
+        }
+        else{
+            echo"<td>$day</td>";
+                }
+    }
+    echo"</tr>";
+}
+echo"</table>";
+?>
