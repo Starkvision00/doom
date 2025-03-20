@@ -1,0 +1,18 @@
+<?php
+setcookie("last_visit", date("Y-m-d H:i:s"), time() + (30*24*60*60));
+$msg = $_COOKIE["last_visit"] ?? "First visit!";
+?>
+
+
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Cookie Example</title>
+</head>
+<body>
+    <h2>store and display last visiting time using cookies</h2>
+    <div>
+    <p class="fs-5"><?= $msg ?></p>
+</div>
+</body>
+</html>
