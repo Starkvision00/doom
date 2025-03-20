@@ -1,0 +1,8 @@
+<?php
+for ($i = 2; $i <= 50; $i++) {
+    $Prime = true;
+    for ($j = 2; $j * $j <= $i; $j++)
+        if ($i % $j == 0) $Prime = false;
+    if ($Prime) echo "$i ";
+}
+?>
