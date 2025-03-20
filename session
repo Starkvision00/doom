@@ -1,0 +1,15 @@
+<?php
+session_start();
+$_SESSION['views'] = ($_SESSION['views'] ?? 0) + 1;
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Views</title>
+</head>
+<body>
+    <h2>Page View Counter</h2>
+    <p>You have visited this page <?= $_SESSION['views']; ?> times.</p>
+</body>
+</html>
