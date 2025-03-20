@@ -1,0 +1,10 @@
+<?php
+$text = "Jamal Mohamed College";
+$vow = preg_match_all('/[aeiou]/i', $text);
+$con = preg_match_all('/[bcdfghjklmnpqrstvwxyz]/i', $text);
+
+echo "Capital: " . strtoupper($text) . "<br>";
+echo "Given String: $text<br><br>";
+echo "No. of vowels in string: $vow<br>";
+echo "No. of consonants in string: $con<br>";
+?>
